@@ -54,7 +54,7 @@ public static class XLuaConfig
 ```
 
 XLua会为这些这些类生成一个C#代理类，在 `LuaEnv` 初始化过程中，会调用自动生成的 `__Register` 方法
-``` C#
+``` c#
 public static void __Register(RealStatePtr L)
 {
     // 获取类型的元表信息
@@ -97,7 +97,7 @@ private int AddObject(object obj)
 ```
 
 分配完对象ID后，xLua会将这个ID推入Lua栈中，并在Lua中将其表示为一个C#对象的代理表。代理表在Lua中表现为普通的table，但通过xLua的内部元表（metatable）机制，可以调用C#对象的方法和属性。
-```C#
+```c#
 // Push方法中调用AddObject为对象分配ID并存储
 public void Push(IntPtr L, object obj)
 {
