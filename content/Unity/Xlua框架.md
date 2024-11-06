@@ -25,7 +25,7 @@ int my_cpp_function(lua_State* L) {
 }
 ```
 
-# Xlua与Unity
+# XLua与Unity
 
 我们希望的是使用Lua的进行开发，那么应该会lua调用C#的逻辑会更多，首先第一步就是要将Untiy中的类型调用支持，首先需要有类型信息的元数据
 
